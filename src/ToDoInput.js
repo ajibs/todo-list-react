@@ -24,10 +24,10 @@ export class ToDoInput extends React.Component {
     return (
       <form ref={(input) => { this.inputForm = input }} onSubmit={this.callHandler}>
         <input
-        style={inputStyle}
-        type="text"
-        placeholder="enter a new task" ref={(input) => { this.taskInput = input }}
-        required />
+          style={inputStyle}
+          type="text"
+          placeholder="Add a New Task" ref={(input) => { this.taskInput = input }}
+          required />
       </form>
     );
   }
