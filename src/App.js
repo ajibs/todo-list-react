@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import TodoContainer from './ToDoContainer'
+import TodoContainer from './ToDoContainer';
+
+const generalWrapperStyle = {
+  color: '#333'
+};
+
 
 class App extends Component {
   render() {
     return (
-      <div>
+      <div style={generalWrapperStyle}>
         <div className="App">
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
