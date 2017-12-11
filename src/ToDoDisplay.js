@@ -7,11 +7,22 @@ const pStyle = {
 
 
 class ToDoDisplay extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(e) {
+    const chosenTask = e.target.value;
+    this.props.deleteTask(chosenTask);
+  }
+
   render() {
-    const taskList = this.props.task.map((item) => {
+    const taskList = this.props.task.map((item, i) => {
       return (
-      <p style={pStyle}>
-        <input type="checkbox" /> {item}
+      <p style={pStyle} key={`key-${i}`}>
+        <input type="checkbox" value={item} onClick={this.handleClick} />
+        {item}
       </p>
       )
     });
